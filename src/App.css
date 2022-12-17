@@ -16,10 +16,7 @@
 }
 
 @media all and (max-width: 600px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-
-
   .card {
-    background-color: rgba(8, 193, 255, 0.308);
     min-height: 100vh;
     justify-content: flex-start;
 
