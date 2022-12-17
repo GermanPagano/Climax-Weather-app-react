@@ -15,9 +15,9 @@
   justify-content: center;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 350px) {
   .card {
-    min-height: 100vh;
+
     justify-content: flex-start;
   }
 
