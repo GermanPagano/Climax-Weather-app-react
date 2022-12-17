@@ -42,7 +42,7 @@ function App() {
 // useEffect ejecutara la funcion getData cuando existan cambios en el estado
 useEffect(() => {
   getData();
-}, [search]) 
+}, [search]) // eslint-disable-line 
 
 ;
 
