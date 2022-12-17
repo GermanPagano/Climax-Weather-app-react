@@ -14,13 +14,21 @@
   color: rgb(129, 129, 129);
 
 }
-
-@media (min-width: 350px ) and ( max-width:500px) {
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
   .card {
     background-color: rgba(8, 193, 255, 0.308);
     min-height: 100vh;
+    justify-content: flex-start;
 
   }
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
 
 
+  .card {
+    background-color: rgba(8, 193, 255, 0.308);
+    min-height: 100vh;
+    justify-content: flex-start;
+
+  }
 }
