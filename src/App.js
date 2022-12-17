@@ -4,10 +4,6 @@ import { Card, Input  } from 'semantic-ui-react'
 import Ico from './components/Ico';
 
 
-
-
-
-
 function App() {
 
   // estados para la busqueda , el icono y el valor
@@ -100,7 +96,7 @@ useEffect(() => {
 
 
 
-          ) : ( <h1>{"City not found"}</h1>)}
+          ) : ( <div><h1>{`City not found`}</h1> <img style={{ maxHeight:'10rem' }} src='https://i.pinimg.com/originals/a5/e1/93/a5e19359f7a639bd4058e94015c9b1ab.png' alt='ss'/>  </div> )}
 
       @climax all rights reserved
     </Card>

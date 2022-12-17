@@ -18,7 +18,7 @@ const Ico = (icon) => {
         break;
 
         case 'Clear':
-        icon = 'http://www.gstatic.com/images/icons/material/apps/weather/1x/sunny_dark_color_96dp.png'
+        icon = 'https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png'
         break;
     
         case 'Rain':
@@ -34,8 +34,7 @@ const Ico = (icon) => {
         break;
         
         default:
-            icon='/public/icons/clear-day.svg';
-            console.log('LIMPIO'); 
+
     }
     return (icon)
     
