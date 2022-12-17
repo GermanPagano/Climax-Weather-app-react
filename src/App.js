@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Card, Input  } from 'semantic-ui-react'
 import Ico from './components/Ico';
+import Favicon from 'react-favicon'
 
 
 function App() {
@@ -50,6 +51,7 @@ useEffect(() => {
 
   return (
     <div className="App">
+    <Favicon url='https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png'/>
     <div className='card'>
     <Card style={{ padding:"0.8rem", boxSizing:'borderbox'}}>
 
