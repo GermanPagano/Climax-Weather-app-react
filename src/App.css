@@ -12,13 +12,14 @@
   align-items: center;
   padding: 2rem;
   color: rgb(129, 129, 129);
-  justify-content: center;
+
 }
 
 @media (min-width: 350px ) and ( max-width:500px) {
   .card {
+    background-color: rgba(8, 193, 255, 0.308);
     min-height: 100vh;
-    justify-content: flex-start;
+
   }
 
 
