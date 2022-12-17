@@ -1,7 +1,7 @@
 .App {
   text-align: center;
+  
 }
-
 
 
 .card {
@@ -12,5 +12,14 @@
   align-items: center;
   padding: 2rem;
   color: rgb(129, 129, 129);
+  justify-content: center;
 }
 
+@media (max-width: 500px) {
+  .card {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+
+}

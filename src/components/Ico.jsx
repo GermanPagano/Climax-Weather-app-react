@@ -18,11 +18,21 @@ const Ico = (icon) => {
         break;
 
         case 'Clear':
-        icon = 'https://statics.eltiempo.es/images/weather/svg/v1/32/n100.svg'
+        icon = 'http://www.gstatic.com/images/icons/material/apps/weather/1x/sunny_dark_color_96dp.png'
         break;
     
-    
+        case 'Rain':
+        icon = 'https://ssl.gstatic.com/onebox/weather/64/rain.png'
+        break;
+        
+        case 'Mist':
+        icon ='https://ssl.gstatic.com/onebox/weather/64/mist.png'    
+        break;
 
+        case 'Fog':
+        icon ='https://ssl.gstatic.com/onebox/weather/64/fog.png'    
+        break;
+        
         default:
             icon='/public/icons/clear-day.svg';
             console.log('LIMPIO'); 

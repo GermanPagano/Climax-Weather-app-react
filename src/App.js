@@ -1,20 +1,23 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Card, Input , Image  } from 'semantic-ui-react'
+import { Card, Input  } from 'semantic-ui-react'
 import Ico from './components/Ico';
+
+
+
 
 
 
 function App() {
 
   // estados para la busqueda , el icono y el valor
-  const [ search , setSearch ] = useState('roma');
+  const [ search , setSearch ] = useState('Buenos aires');
   const [ icon, setIcon ] = useState('');
   const [ value , setValue] = useState('');
 
 
 // funcion getData para buscar datos de la api
-  const URL =`https://api.openweathermap.org/data/2.5/weather?q=${search}&lang=en&units=metric&appid=3d7b683a89edb0c24fd7cd7102449ccc` 
+  const URL =`https://api.openweathermap.org/data/2.5/weather?q=${search}&lang=en&units=metric&appid=${process.env.REACT_APP_API_KEY}` 
   const getData = async() => {
 
       await fetch (URL)
@@ -26,6 +29,7 @@ function App() {
           console.log(data.weather[0].main)
           setIcon(data.weather[0].main)
           setValue( data )
+          console.log(data)
         }
         })
       .catch( err => {
@@ -78,19 +82,15 @@ useEffect(() => {
     </Card.Meta>
     {/*  temperatura ahora */}
     <p> {value.main.temp.toFixed(0)}&deg;</p>
-  
 
     {/* icono del clima  */}
-    <Card.Meta className='flex'>
+    <Card.Meta>
       <img alt='weather-img' src={Ico(icon)} />
-        {value.weather[0].description} 
     </Card.Meta>
-
-
-
-
-
-
+    {/* Descripcion del clima  */}
+    <Card.Meta>
+    {value.weather[0].description} 
+    </Card.Meta>
     <Card.Description>
     <p> 
       {`Hum ${value.main.humidity}%`}
@@ -104,6 +104,7 @@ useEffect(() => {
 
       @climax all rights reserved
     </Card>
+      <h4>By Pagano German</h4>
     </div>
     </div>
   );
